@@ -1,0 +1,11 @@
+[package]
+name = "{{crate-name}}"
+version = "0.1.0"
+authors = ["{{authors}}"]
+edition = "2021"
+license = "MIT"
+
+[dependencies]
+
+[package.metadata.release]
+tag = false
