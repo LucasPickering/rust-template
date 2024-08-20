@@ -1,0 +1,27 @@
+[template]
+cargo_generate_version = ">=0.21.0"
+
+[placeholders.gh-username]
+type = "string"
+prompt = "GitHub username (or organization)"
+regex = "^[A-Za-z0-9][A-Za-z0-9-]{0,38}$"
+default = "LucasPickering"
+
+[placeholders.project-description]
+type = "string"
+prompt = "Project description"
+
+[placeholders.dist]
+type = "bool"
+default = false
+prompt = "Set up cargo-dist?"
+
+[conditional.'crate_type == "lib"']
+ignore = ["src/main.rs"]
+
+[conditional.'crate_type == "bin"']
+ignore = ["src/lib.rs"]
+
+[conditional.'dist']
+[hooks]
+post = ["post-script.rhai"]
