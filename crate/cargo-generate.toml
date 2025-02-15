@@ -1,15 +1,13 @@
 [template]
 cargo_generate_version = ">=0.21.0"
 
-[placeholders.subcrate-name]
-type = "string"
+[placeholders.crate-name]
 prompt = "Crate name"
-
-[placeholders.gh-username]
 type = "string"
-prompt = "GitHub username (or organization)"
-regex = "^[A-Za-z0-9][A-Za-z0-9-]{0,38}$"
-default = "LucasPickering"
+
+[placeholders.description]
+prompt = "Description"
+type = "string"
 
 [conditional.'crate_type == "lib"']
 ignore = ["src/main.rs"]

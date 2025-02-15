@@ -1,11 +1,16 @@
 [package]
+authors = {workspace = true}
+description = "{{description}}"
+edition = {workspace = true}
+homepage = {workspace = true}
+keywords = {workspace = true}
+license = {workspace = true}
 name = "{{crate-name}}"
-version = "0.1.0"
-authors = ["{{authors}}"]
-edition = "2021"
-license = "MIT"
-
-[dependencies]
+repository = {workspace = true}
+rust-version = {workspace = true}
+version = {workspace = true}
 
 [package.metadata.release]
 tag = false
+
+[dependencies]
