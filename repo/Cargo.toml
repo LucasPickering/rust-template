@@ -3,8 +3,10 @@ name = "{{project-name}}"
 description = "{{project-description}}"
 version = "0.1.0"
 authors = ["{{authors}}"]
+keywords = []
 repository = "https://github.com/{{gh-username}}/{{project-name}}"
-edition = "2021"
+homepage = "https://github.com/{{gh-username}}/{{project-name}}"
+edition = "2024"
 license = "MIT"
 # Keep in sync w/ rust-toolchain.toml
 {%- if crate_type == "lib" %}# TODO downgrade MSRV{% endif %}
