@@ -10,7 +10,7 @@ edition = "2024"
 license = "MIT"
 # Keep in sync w/ rust-toolchain.toml
 {%- if crate_type == "lib" %}# TODO downgrade MSRV{% endif %}
-rust-version = "1.80.0"
+rust-version = "1.86.0"
 
 [dependencies]
 
