@@ -1,5 +1,6 @@
 [template]
 cargo_generate_version = ">=0.21.0"
+ignore = ["post-script.rhai"]
 
 [placeholders.gh-username]
 default = "LucasPickering"
@@ -16,7 +17,7 @@ default = "1.95.0"
 prompt = "Rust version"
 type = "string"
 
-[placeholders.dist]
+[conditional.'crate_type == "bin"'.placeholders.dist]
 default = false
 prompt = "Set up cargo-dist?"
 type = "bool"
@@ -27,6 +28,5 @@ ignore = ["src/main.rs"]
 [conditional.'crate_type == "bin"']
 ignore = ["src/lib.rs"]
 
-[conditional.'dist']
-[hooks]
+[conditional.'dist'.hooks]
 post = ["post-script.rhai"]
