@@ -10,9 +10,7 @@ edition = "2024"
 license = "MIT"
 # Keep in sync w/ rust-toolchain.toml
 {%- if crate_type == "lib" %}# TODO downgrade MSRV{% endif %}
-rust-version = "1.86.0"
-
-[dependencies]
+rust-version = "{{rust-version}}"
 
 [workspace.metadata.release]
 pre-release-replacements = [
@@ -41,12 +39,20 @@ map_unwrap_or = "allow"
 match_same_arms = "allow"
 missing_errors_doc = "allow"
 missing_panics_doc = "allow"
+module_inception = "allow"
+mod_module_files = "deny"
 must_use_candidate = "allow"
 needless_pass_by_value = "allow"
 similar_names = "allow"
+single_match = "allow"
 too_many_lines = "allow"
 unused_self = "allow"
 used_underscore_binding = "allow"
+
+[dependencies]
+
+[lints]
+workspace = true
 
 {%- if dist %}
 

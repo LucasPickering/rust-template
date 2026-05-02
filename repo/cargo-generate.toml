@@ -2,19 +2,24 @@
 cargo_generate_version = ">=0.21.0"
 
 [placeholders.gh-username]
-type = "string"
+default = "LucasPickering"
 prompt = "GitHub username (or organization)"
 regex = "^[A-Za-z0-9][A-Za-z0-9-]{0,38}$"
-default = "LucasPickering"
+type = "string"
 
 [placeholders.project-description]
-type = "string"
 prompt = "Project description"
+type = "string"
+
+[placeholders.rust-version]
+default = "1.95.0"
+prompt = "Rust version"
+type = "string"
 
 [placeholders.dist]
-type = "bool"
 default = false
 prompt = "Set up cargo-dist?"
+type = "bool"
 
 [conditional.'crate_type == "lib"']
 ignore = ["src/main.rs"]

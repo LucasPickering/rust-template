@@ -10,7 +10,10 @@ repository = {workspace = true}
 rust-version = {workspace = true}
 version = {workspace = true}
 
+[dependencies]
+
+[lints]
+workspace = true
+
 [package.metadata.release]
 tag = false
-
-[dependencies]

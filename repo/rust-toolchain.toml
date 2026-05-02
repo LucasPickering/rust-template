@@ -1,4 +1,4 @@
 [toolchain]
 # Keep in sync w/ MSRV
-channel = "1.86.0"
+channel = "{{rust-version}}"
 components = ["cargo", "clippy", "rustfmt"]
