@@ -1,4 +1,4 @@
 [toolchain]
 # Keep in sync w/ MSRV
 channel = "{{rust-version}}"
-components = ["cargo", "clippy", "rustfmt"]
+components = ["cargo", "clippy", "rustfmt", "rust-analyzer"]
